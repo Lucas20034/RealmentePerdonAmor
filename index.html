@@ -16,10 +16,11 @@
 
       :root {
         --dark-color: #000;
-        --heart-color: #ff00ff; 
+        --heart-color: #ff00ff;
       }
 
-      html, body {
+      html,
+      body {
         overflow: hidden;
         height: 100%;
         margin: 0;
@@ -36,11 +37,11 @@
 
       .titulo {
         margin-bottom: 180px;
-        color: #ff00ff; 
+        color: #ff00ff;
         position: absolute;
-        top: 20px; 
+        top: 20px;
         left: 50%;
-        transform: translateX(-50%); 
+        transform: translateX(-50%);
         width: 80%;
         font-size: 3vh;
         opacity: 0;
@@ -74,7 +75,7 @@
           radial-gradient(
             ellipse at bottom,
             var(--dark-color),
-            rgba(255, 105, 180, 0.2) 
+            rgba(255, 105, 180, 0.2)
           ),
           repeating-linear-gradient(
             220deg,
@@ -97,7 +98,7 @@
             transparent 19px,
             transparent 22px
           ),
-          linear-gradient(90deg, rgb(255, 0, 255), rgb(240, 240, 240)); 
+          linear-gradient(90deg, rgb(255, 0, 255), rgb(240, 240, 240));
       }
 
       .heart-container {
@@ -112,24 +113,24 @@
       .heart {
         position: absolute;
         width: 100px;
-        height: 90px; 
-        animation: beat 1.5s infinite, growHeart 3s ease-in-out forwards; 
-        transform: scale(0); 
+        height: 90px;
+        animation: beat 1.5s infinite, growHeart 3s ease-in-out forwards;
+        transform: scale(0);
       }
 
       .heart::before,
       .heart::after {
         position: absolute;
         content: "";
-        left: 50px; 
+        left: 50px;
         top: 0;
-        width: 50px; 
-        height: 80px; 
+        width: 50px;
+        height: 80px;
         background: var(--heart-color);
         border-radius: 50px 50px 0 0;
         transform: rotate(-45deg);
         transform-origin: 0 100%;
-        filter: drop-shadow(0 0 10px #ff00ff); 
+        filter: drop-shadow(0 0 10px #ff00ff);
       }
 
       .heart::after {
@@ -139,7 +140,8 @@
       }
 
       @keyframes beat {
-        0%, 100% {
+        0%,
+        100% {
           transform: scale(1);
         }
         50% {
@@ -149,16 +151,15 @@
 
       @keyframes growHeart {
         0% {
-          transform: scale(0); 
-          opacity: 0; 
+          transform: scale(0);
+          opacity: 0;
         }
         100% {
           transform: scale(1);
-          opacity: 1; 
+          opacity: 1;
         }
       }
 
-    
       .heart-1 {
         top: 10%;
         left: 10%;
@@ -207,15 +208,14 @@
         animation-delay: 3s;
       }
 
-      
       .image-container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
-        width: 300px; 
-        height: 300px; 
+        width: 300px;
+        height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -224,20 +224,73 @@
       .image-container img {
         max-width: 100%;
         max-height: 100%;
-        border-radius: 50%; 
+        border-radius: 50%;
         animation: fadeIn 3s ease-in-out forwards;
+      }
+
+      /* Media Queries para hacerlo responsive */
+      @media (max-width: 768px) {
+        .titulo {
+          font-size: 2vh;
+          top: 10px;
+        }
+
+        .image-container {
+          width: 200px;
+          height: 200px;
+        }
+
+        .heart-1,
+        .heart-2,
+        .heart-3,
+        .heart-4,
+        .heart-5,
+        .heart-6 {
+          width: 60px;
+          height: 54px;
+        }
+
+        .heart-1 {
+          top: 5%;
+          left: 5%;
+        }
+
+        .heart-2 {
+          top: 15%;
+          right: 10%;
+        }
+
+        .heart-3 {
+          bottom: 10%;
+          left: 15%;
+        }
+
+        .heart-4 {
+          bottom: 5%;
+          right: 5%;
+        }
+
+        .heart-5 {
+          top: 25%;
+          left: 2%;
+        }
+
+        .heart-6 {
+          top: 35%;
+          right: 2%;
+        }
       }
     </style>
   </head>
   <body>
     <h1 class="titulo">
-      Te amo mucho mi reina , quiero pedirte perdon hoy nuevamente... , realmete me queres mucho y yo tambien 
-      amo verte sonreir... pero ayer te hice daño y no me perdono eso... tampoco lo de la otra ves ya van dos . 
-      Solo quiero que sepas que te amo y gracias por perdonar mis errores. <br>
+      Te amo mucho mi reina, quiero pedirte perdón hoy nuevamente... Realmente me
+      quieres mucho y yo también amo verte sonreír... pero ayer te hice daño y no
+      me perdono eso... tampoco lo de la otra vez, ya van dos. Solo quiero que
+      sepas que te amo y gracias por perdonar mis errores. <br />
     </h1>
     <div class="night"></div>
     <div class="heart-container">
-      <!-- pruebo si quedan bien -->
       <div class="heart heart-1"></div>
       <div class="heart heart-2"></div>
       <div class="heart heart-3"></div>
@@ -245,9 +298,9 @@
       <div class="heart heart-5"></div>
       <div class="heart heart-6"></div>
     </div>
-  
+
     <div class="image-container">
-      <img src="C:\Users\lucas\Downloads\flor para el amor/Novios.jpeg" alt="Novios" /> 
+      <img src="Novios.jpeg" alt="Novios" />
     </div>
   </body>
 </html>
